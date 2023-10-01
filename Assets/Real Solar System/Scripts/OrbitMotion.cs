@@ -74,7 +74,8 @@ public class OrbitMotion : MonoBehaviour
             solarObject.rotationAngle = obj.rotationAngle;
             solarObject.isRotationClockwise = obj.isRotationClockwise;
             solarObject.isMoving = obj.isMoving;
-            solarObject.isRotating = obj.isRotating;
+           // solarObject.isRotating = obj.isRotating;
+            solarObject.isRotating = false;
         }
 
         // Use real world values

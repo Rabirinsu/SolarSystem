@@ -124,7 +124,7 @@ MonoBehaviour:
     rotationPeriodDays: 1
     drawOrbit: 1
     isMoving: 1
-    isRotating: 1
+    isRotating: 0
   orbitProgress: 0
   isActive: 1
   rotationProgress: 0
