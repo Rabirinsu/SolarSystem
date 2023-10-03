@@ -38,7 +38,7 @@ public class OrbitMotion : MonoBehaviour
         Initialize();
     }
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(Movement());
         StartCoroutine(Rotation());
@@ -57,12 +57,12 @@ public class OrbitMotion : MonoBehaviour
     private void OnValidate()
     {
         // Load predefined planet values
-        Initialize();
+             //    Initialize();
     }
 
     private void Initialize()
     {
-           if (solarObject.type != Constants.Objects.None)
+           if (solarObject.type != Constants.Objects.None )
         {
             SolarObject obj = Constants.GetObjectData(solarObject.type);
             solarObject.xAxis = obj.xAxis;
@@ -74,8 +74,8 @@ public class OrbitMotion : MonoBehaviour
             solarObject.rotationAngle = obj.rotationAngle;
             solarObject.isRotationClockwise = obj.isRotationClockwise;
             solarObject.isMoving = obj.isMoving;
-           // solarObject.isRotating = obj.isRotating;
-            solarObject.isRotating = false;
+            solarObject.isRotating = obj.isRotating;
+          //  solarObject.isRotating = false;
         }
 
         // Use real world values
@@ -113,8 +113,8 @@ public class OrbitMotion : MonoBehaviour
         else
             rotationDirection = Vector3.down;
 
-
-        SetPosition();
+       //   if(this.enabled)
+      //  SetPosition();
 
         //Enable or disable orbit ellipse
         if (GetComponent<LineRenderer>() != null)
@@ -141,7 +141,6 @@ public class OrbitMotion : MonoBehaviour
 
                 orbitProgress += Time.deltaTime * orbitSpeed * simulationSpeedMovementValue;
                 orbitProgress %= 1f;
-
                 SetPosition();
             }
 

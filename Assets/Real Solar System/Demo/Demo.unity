@@ -565,7 +565,6 @@ GameObject:
   - component: {fileID: 1096201533}
   - component: {fileID: 1096201532}
   - component: {fileID: 1096201531}
-  - component: {fileID: 1096201530}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -573,20 +572,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1096201530
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1096201529}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1096201531
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -644,14 +629,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096201529}
-  m_LocalRotation: {x: -0.20287602, y: 0.65295184, z: 0.70512474, w: 0.18786786}
-  m_LocalPosition: {x: -32.1, y: 0.41063005, z: 35.067715}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0.64158356, y: 0, z: 0, w: 0.7670532}
+  m_LocalPosition: {x: -11.65, y: 0, z: 47.34}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: -94.4, y: 147.9, z: -0.003}
+  m_LocalEulerAnglesHint: {x: -79.82, y: 0, z: 0}
 --- !u!1 &1123455303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,13 +1168,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66ee200c56f3c4a46b5768a6db7cc051, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  warnCanvas: {fileID: 436794890}
-  insideCanvas: {fileID: 985490230}
-  distance_TMP: {fileID: 2067084247}
   spaceShip: {fileID: 1096201533}
-  planet: {fileID: 7896074621136303084}
+  currentPlanet: {fileID: 7896074621136303084}
   warnDistance: 20
-  insideDistance: 1
+  insideDistance: 5
 --- !u!4 &2135651412
 Transform:
   m_ObjectHideFlags: 0
