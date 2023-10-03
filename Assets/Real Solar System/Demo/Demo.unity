@@ -565,6 +565,8 @@ GameObject:
   - component: {fileID: 1096201533}
   - component: {fileID: 1096201532}
   - component: {fileID: 1096201531}
+  - component: {fileID: 1096201534}
+  - component: {fileID: 1096201535}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -629,14 +631,63 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096201529}
-  m_LocalRotation: {x: -0.64158356, y: 0, z: 0, w: 0.7670532}
-  m_LocalPosition: {x: -11.65, y: 0, z: 47.34}
+  m_LocalRotation: {x: 0.21643962, y: 0, z: 0, w: 0.976296}
+  m_LocalPosition: {x: -26.97, y: 0, z: 40.19}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -79.82, y: 0, z: 0}
+--- !u!114 &1096201534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096201529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e57c007f890987459d0818e25f8e3da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPlanet: 0
+  spaceShip: {fileID: 1096201533}
+  speed: 2.88
+  targetPlanet: {fileID: 0}
+  warnDistance: 21.1
+  insideDistance: 1.38
+--- !u!114 &1096201535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096201529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7532b501d18425cac552e89b0439f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solarObject:
+    type: 5
+    xAxis: 25
+    zAxis: 30
+    orbitPeriodSeconds: 59287680
+    rotationPeriodSeconds: 87264
+    rotationAngle: 25
+    isRotationClockwise: 0
+    realWorldSimulation: 1
+    orbitPeriodYears: 1.88
+    rotationPeriodDays: 1.01
+    drawOrbit: 0
+    isMoving: 1
+    isRotating: 1
+  orbitProgress: 0
+  isActive: 0
+  rotationProgress: 0
+  movementSpeed: 2
+  rotationSpeed: 2
 --- !u!1 &1123455303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,9 +1220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceShip: {fileID: 1096201533}
-  currentPlanet: {fileID: 7896074621136303084}
+  targetPlanet: {fileID: 0}
   warnDistance: 20
-  insideDistance: 5
+  insideDistance: 1
 --- !u!4 &2135651412
 Transform:
   m_ObjectHideFlags: 0
@@ -1352,7 +1403,7 @@ PrefabInstance:
     - target: {fileID: 7896074620646931334, guid: fe7a94622372a46fa81d9d8cfaaddf46,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7896074620759400212, guid: fe7a94622372a46fa81d9d8cfaaddf46,
         type: 3}
@@ -1571,9 +1622,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe7a94622372a46fa81d9d8cfaaddf46, type: 3}
---- !u!1 &7896074621136303084 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7896074620646931328, guid: fe7a94622372a46fa81d9d8cfaaddf46,
-    type: 3}
-  m_PrefabInstance: {fileID: 7896074621136303083}
-  m_PrefabAsset: {fileID: 0}
